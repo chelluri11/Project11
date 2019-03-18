@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>
+        forms
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <div class="container">
+    <body style="background-color:aqua">
+        <h1>FORMS IN HTML</h1>
+        <h2> just a form </h2>
+
+        <label>first Name:</label>
+        <input type="text"  name="firstName" placeholder="1stName"  id="bb" required >
+        <input type="password"  name="password"  id="bb1" required>
+
+        <input type=" email" name="email" id="em" required>
+
+        <button type="button"  onclick="func1()">submit</button>
+ 
+
+
+        <script>
+           
+            function func1(){
+                var fname = document.getElementById("bb").value;
+                var pass = document.getElementById("bb1").value;
+                var eml = document.getElementById("em").value;
+                var patfirst = "^[A-Za-z]+$";
+                var patpass = "^[A-Za-z0-9]+$";
+                var pateml = "[A-Za-z0-9]+@+[gmail.com]";
+
+
+                if(fname==""&&pass==""&&eml==""){
+                    alert("enter");
+                    }
+                else{
+                    console.log("ok values taken");
+                }
+
+                
+                if(eml.match(pateml)){
+                    console.log("email printed");
+                }
+                else{
+
+                    document.getElementById("em").innerHTML="invalid username";
+                           document.getElementById("em").style.color="darkgreen";
+        
+                }
+               
+                if(fname.match(patfirst)){
+                    
+               
+              alert("done");
+              
+                }
+
+
+                else{
+                     document.getElementById("bb").innerHTML="shut";
+                     document.getElementById("bb").style.color="red";
+                   // alert("wrong");
+                  
+
+                }
+                if(pass.match(patpass)){
+                    
+               
+                    alert("fuck");
+                    
+                      }
+      
+      
+                      else{
+                           document.getElementById("bb1").innerHTML="invalid username";
+                           document.getElementById("bb1").style.color="blue";
+                         // alert("wrong");
+                        
+      
+                      }
+
+            }
+             
+
+        </script>
+
+    
+    </body>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+</html>
